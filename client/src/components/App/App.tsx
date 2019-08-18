@@ -1,10 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from '../../logo.svg';
 import './App.css';
+import { MyComponent } from './App.style';
 
 const App: React.FC = () => {
   return (
-    <div className="App">
+    <MyComponent>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -19,7 +20,7 @@ const App: React.FC = () => {
           Learn React
         </a>
       </header>
-    </div>
+    </MyComponent>
   );
 };
 
