@@ -2,26 +2,25 @@ import React from 'react';
 import logo from '../../logo.svg';
 import './App.css';
 import { MyComponent, StyledButton } from './App.style';
+import { Layout } from 'antd';
+
+const { Header, Sider, Content } = Layout;
 
 const App: React.FC = () => {
   return (
-    <MyComponent>
-      <header className="App-header">
-        <StyledButton></StyledButton>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </MyComponent>
+    <Layout>
+      <Sider>Sider</Sider>
+      <Layout>
+        <Header>Header</Header>
+        <Content>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
+          accusantium adipisci aliquam aperiam beatae, commodi consectetur,
+          dolorem dolores et, eveniet exercitationem labore minima optio quia
+          quidem suscipit tempore ullam? Adipisci alias aliquid, doloremque
+          doloribus ipsa nulla quibusdam sapiente sint vel.
+        </Content>
+      </Layout>
+    </Layout>
   );
 };
 
